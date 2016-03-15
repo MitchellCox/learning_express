@@ -1,0 +1,27 @@
+<% if(product) { %>
+	<h1>Info for <%= product.name %> </h1>
+
+	<table>
+		<thead>
+			<th>ID</th>
+			<th>Description</th>
+			<th>Price</th>
+			<th>Quantity</th>
+			<th>Color</th>
+			<th>Weight</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td><%= product.id %></td>
+				<td><%= product.description %></td>
+				<td><%= product.base_price %></td>
+				<td><%= product.quantity_on_hand %></td>
+				<td><%= product.color %></td>
+				<td><%= product.weight %></td>
+			</tr>
+		</tbody>
+	</table>
+<% } else { %>
+	<h1>Product Not Found</h1>
+<% } %>
+<a href='/products/'>Show All Products</a>

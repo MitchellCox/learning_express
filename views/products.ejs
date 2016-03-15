@@ -1,0 +1,37 @@
+<a href='/'>Back</a>
+<h1>Products</h1>
+
+<!-- **************************
+Non-Echoing Tag:
+<% %>
+-Looping, Conditionals, Creating Vars 
+
+Echoing EJS Tag:
+<%= %>
+-Variable values 
+******************************* -->
+
+<table>
+	<thead>
+		<th>ID</th>
+		<th>Name</th>
+		<th>Price</th>
+		<th>Description</th>
+		<th>Quantity</th>
+		<th>Color</th>
+		<th>Weight</th>
+	</thead>
+	<tbody>
+		<% products.products.forEach(function(product) { %>
+			<tr>
+				<td> <%=product.id%> </td>
+				<td> <a href=<%= '/products/' + product.id %> > <%=product.name%> </a> </td>
+				<td> <%=product.base_price%> </td>
+				<td> <%=product.description%> </td>
+				<td> <%=product.quantity_on_hand%> </td>
+				<td> <%=product.color%> </td>
+				<td> <%=product.weight%> </td>
+			</tr> 
+		<% }) %>
+	</tbody>
+</table>
